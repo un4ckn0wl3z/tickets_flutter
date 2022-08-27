@@ -8,11 +8,44 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xDDeeedf2),
-      body: null,
+    return  Scaffold(
+      backgroundColor: const Color(0xDDeeedf2),
+      body: ListView(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                         Text('Good Morning'),
+                         Text('Book Tickets'),
+                      ],
+                    ),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            'assets/images/img_1.png'
+                          )
+                        )
+                      ),
+                    )
+                  ],
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
-
-// https://youtu.be/71AsYo2q_0Y?t=3168
